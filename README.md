@@ -1,6 +1,6 @@
-My groupmembers are:
+My group members are:
 - Bobby Khleang
-- Sara Ross
+- Sarah Ross
 - George Williams
 - Dylan Burton
 - Omaid Ghafoori
