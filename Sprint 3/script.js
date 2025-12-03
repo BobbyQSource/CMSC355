@@ -12,11 +12,11 @@ function goToLogin() {
 }
 
 function registerUser() {
-    alert("Registered. Redirecting to login...");
+    alert("Registration successful. Redirecting to login...");
     window.location.href = "login.html";
 }
 
-// === Medical Info Save (TC03 Logic) ===
+// Medical Info Save (TC03 Logic)
 function saveMedicalInfo() {
     const weight = Number(document.getElementById("weight").value);
     const ft = document.getElementById("heightFt").value;
@@ -24,21 +24,21 @@ function saveMedicalInfo() {
     const age = Number(document.getElementById("age").value);
     const msg = document.getElementById("msg");
 
-    // TC03 Condition — INVALID WEIGHT
+    // TC03 Condition
     if (weight <= 0) {
-        msg.innerText = "Invalid weight.";
+        msg.innerText = "Error: Weight must be greater than 0.";
         return;
     }
 
     // Height validation
     if (ft === "" || inch === "") {
-        msg.innerText = "Height cannot be blank!";
+        msg.innerText = "Error: Height fields cannot be empty.";
         return;
     }
 
     // Age validation
     if (!(age > 0 && age < 120)) {
-        msg.innerText = "Invalid Age.";
+        msg.innerText = "Error: Age must be between 1 and 119.";
         return;
     }
 
@@ -52,5 +52,5 @@ function saveMedicalInfo() {
 
     localStorage.setItem("medicalInfo", JSON.stringify(data));
 
-    msg.innerText = "Saved.";
+    msg.innerText = "Information saved successfully.";
 }
